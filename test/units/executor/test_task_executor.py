@@ -464,7 +464,7 @@ class TestTaskExecutor(unittest.TestCase):
         data = {
             'foo': 'bar',
             'baz': 1,
-            'qux': ['one', 'two', 'three'],
+            'qux': ['one', 'POPCORN', 'two', 'three'],
             'subdict': {
                 'remove': 'POPCORN',
                 'keep': 'not_popcorn',
@@ -494,9 +494,9 @@ class TestTaskExecutor(unittest.TestCase):
                 'subsubdict': {
                     'keep': 'not_popcorn',
                 },
-                'a_list': ['POPCORN'],
+                'a_list': [],
             },
-            'a_list': ['POPCORN'],
+            'a_list': [],
             'list_of_lists': [
                 ['some', 'thing'],
             ],
