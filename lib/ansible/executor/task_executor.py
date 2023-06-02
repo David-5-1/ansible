@@ -67,9 +67,9 @@ def remove_omit(task_args, omit_token):
             new_args[key] = remove_omit(value, omit_token)
         elif isinstance(value, list):
             new_args[key] = [
-                remove_omit(v, omit_token)
-                for v in value
-                if value != omit_token
+                remove_omit(item, omit_token)
+                for item in value
+                if item != omit_token
             ]
         else:
             new_args[key] = value
